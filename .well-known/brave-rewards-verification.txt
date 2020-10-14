@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: shohamc1.github.io
+Token: d49480f2b1742f41623fa4ef2d724ee5f4a162d958885b4b38ef230f056ab46e
