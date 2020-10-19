@@ -3,6 +3,7 @@
   <head>
     <title>shohamc1 - Shoham Chakraborty</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="grayscaleit.css" />
 
     <link
       rel="apple-touch-icon"
@@ -166,7 +167,38 @@
           dictumst quisque sagittis purus. Risus commodo viverra maecenas
           accumsan lacus vel facilisis volutpat.
         </p>
-      </section>
+        <h2 style="text-align: center; margin-top: 0.5em;">Technologies</h2>
+        <div class="grayboxes">
+        <div class="graybox">
+          <img src="icons/python.png" class="grayscaleit">
+          <img src="icons/cpp.png" class="grayscaleit">
+          <img src="icons/nodejs.png" class="grayscaleit">
+          <img src="icons/golang.png" class="grayscaleit">
+        </div>
+        <div class="graybox">
+          <img src="icons/mysql.png" class="grayscaleit">
+          <img src="icons/postgresql.png" class="grayscaleit">
+          <img src="icons/mongodb.png" class="grayscaleit">
+          <img src="icons/redis.png" class="grayscaleit">
+        </div>
+      </div>
+
+      <h2 style="text-align: center; margin-top: 0.5em;">Frameworks</h2>
+        <div class="grayboxes">
+        <div class="graybox">
+          <img src="icons/python.png" class="grayscaleit">
+          <img src="icons/cpp.png" class="grayscaleit">
+          <img src="icons/nodejs.png" class="grayscaleit">
+          <img src="icons/golang.png" class="grayscaleit">
+        </div>
+        <div class="graybox">
+          <img src="icons/mysql.png" class="grayscaleit">
+          <img src="icons/postgresql.png" class="grayscaleit">
+          <img src="icons/mongodb.png" class="grayscaleit">
+          <img src="icons/redis.png" class="grayscaleit">
+        </div>
+      </div>
+      </section>  
     </div>
     <div class="projects">
       <h1>Some of my projects</h1>
@@ -196,6 +228,13 @@
         let progressHeight = (window.pageYOffset / totalHeight) * 100;
         progress.style.height = progressHeight + "%";
       };
+
+      window.onload = function() {
+        var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+        if (mobile) {
+            alert("Due to computer first design, this website is not suited for mobile :/");              
+        } else { }
+      }
     </script>
   </body>
 </html>
