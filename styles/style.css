@@ -10,6 +10,10 @@ section {
   background: #000;
 }
 
+.removeunderline {
+  text-decoration: none;
+}
+
 .intro-text {
   border-radius: 15px;
   flex-grow: 1;
@@ -92,7 +96,6 @@ section p {
   flex-direction: row;
   flex-wrap: wrap;
   flex-shrink: 1;
-  overflow: hidden;
   justify-content: center;
 }
 
