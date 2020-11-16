@@ -1,0 +1,248 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+:root {
+  font-size: 1vw;
+  --cardW: 20vw;
+  --cardH: 20vw;
+  --cardZInc: 0.5em;
+  --gap: 1.5em;
+  --ttxt: 0.5em;
+}
+a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+body {
+  background-attachment: fixed;
+  font: 1em "Open Sans", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  position: sticky;
+  background-color: #f2f2f2;
+}
+
+/* Grid */
+.cards,
+.stack {
+  transform-style: preserve-3d;
+}
+.title-text {
+  text-align: center;
+  font: 1em "Rubik Mono One", sans-serif;
+  /* letter-spacing: 0.5em; */
+  font-size: 1.1em;
+  color: black;
+  grid-template: repeat(12, calc (var(--cardH) * 2)) / var(--cardW);
+  z-index: 0;
+  outline: 50px solid #f2f2f2;
+  position: absolute;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 40em;
+  transform: translateZ(-10px);
+  top: calc(-1% - var(--gap) * 2);
+  opacity: 1;
+}
+
+.stack .contents {
+  color: #faf;
+  position: relative;
+}
+
+.cards {
+  --scroll: 100px;
+  display: grid;
+  grid-template: repeat(12 var(--cardH)) / var(--cardW);
+  grid-gap: var(--gap);
+  padding-bottom: calc(var(--cardH) * 3);
+  position: absolute;
+  transform: translate(-20%, calc(-50% + var(--scroll))) rotateX(45deg)
+    rotateZ(45deg) translateY(calc(50% - var(--scroll)));
+  z-index: 1;
+}
+
+/* Card hover */
+.stack:hover .top,
+.stack:focus .top {
+  transition: all 0.5s;
+  transform: translateZ(calc(var(--cardZInc) * 4)) rotateX(-20deg);
+
+  transform-origin: center bottom;
+  z-index: 2;
+}
+
+.stack:nth-child(2):active .top {
+  transform: translateX(
+      calc(0px - calc(var(--gap) * 1) + calc(var(--cardW) * 1))
+    )
+    translateY(calc(0px + calc(var(--gap) * 1) + calc(var(--cardW) * 1)))
+    translateZ(16vw) rotateX(-25.1deg) rotateY(27deg) rotateZ(-40deg);
+}
+.stack:nth-child(3):active .top {
+  transform: translateX(
+      calc(0px + calc(var(--gap) * 1) - calc(var(--cardW) * 0.5))
+    )
+    translateY(calc(0px + calc(var(--gap) * 4) + calc(var(--cardW) * 1)))
+    translateZ(16vw) rotateX(-25.1deg) rotateY(27deg) rotateZ(-40deg);
+}
+
+.stack:nth-child(4):active .top {
+  transform: translateX(
+      calc(0px + calc(var(--gap) * 0) - calc(var(--cardW) * 1.5))
+    )
+    translateY(calc(0px + calc(var(--gap) * 1) + calc(var(--cardW) * 1)))
+    translateZ(16vw) rotateX(-25.1deg) rotateY(27deg) rotateZ(-40deg);
+}
+
+/* Other card styles */
+.card {
+  /*background-image: url(https://cdn.weasyl.com/static/media/dd/c2/45/ddc2458130dd90cf4d5f5783f14f7835cf980110df9131354325a358a3d3d60d.png);*/
+  background-color: black;
+  background-size: 200% 200%;
+  box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2) inset;
+  color: #000;
+  padding: 0em;
+  position: absolute;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+}
+.top {
+  transform: translateZ(10px);
+  z-index: 15;
+}
+
+.shadow {
+  background: #000;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  opacity: 0.2;
+}
+/* Alter grid at breakpoints */
+@media screen and (max-width: 550px) {
+  :root {
+    font-size: 5vw;
+    --cardW: 100vw;
+    --cardH: 100vw;
+    --cardZInc: 10.5em;
+    --ttxt: 0.5em;
+  }
+  .stack:hover .top,
+  .stack:focus .top {
+    transform: translateZ(calc(var(--cardZInc) * 0)) rotateX(0deg);
+    transform-origin: center bottom;
+  }
+  .cards {
+    grid-template: repeat(24, var(--cardH)) / repeat(1, var(--cardW));
+    transform: translate(-0, calc(0 + var(--scroll))) rotateX(0deg)
+      rotateZ(0deg) translateY(calc(0% - var(--scroll)));
+    left: 0%;
+    top: 25%;
+  }
+  .titre {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
+    bottom: 80vh;
+    left: 10px;
+    white-space: nowrap;
+  }
+  .title-text {
+    font-size: 6vw;
+    letter-spacing: 0em;
+    opacity: 0;
+    width: 100vw;
+    top: -100px;
+  }
+  #dg {
+    bottom: 5vh;
+  }
+}
+@media screen and (min-width: 551px) {
+  #nom {
+    white-space: nowrap;
+    width: 100%;
+  }
+  #dg {
+    margin-top: 10vh;
+  }
+  .cards {
+    grid-template: repeat(16, var(--cardH)) / repeat(2, var(--cardW));
+    top: 50%;
+    left: 60%;
+  }
+  :root {
+    font-size: 2vw;
+    --cardW: 40vw;
+    --cardH: 40vw;
+    --cardZInc: 0.5em;
+    --ttxt: 1em;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #nom {
+    white-space: normal;
+  }
+  #dg {
+    font-size: calc(var(--ttxt) * 0.7);
+    margin-top: 13vw;
+  }
+  .cards {
+    grid-template: repeat(12, var(--cardH)) / repeat(3, var(--cardW));
+    top: 35%;
+    left: 60%;
+  }
+  :root {
+    font-size: 2vw;
+    --cardW: 18vw;
+    --cardH: 18vw;
+    --cardZInc: 0.5em;
+    --ttxt: 1em;
+  }
+}
+
+.underappreciated {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0.25rem;
+  margin-left: 0.25rem;
+  padding: 0.25rem;
+  background-color: rgb(24, 24, 24);
+  display: table;
+  overflow: hidden;
+
+  max-width: 20vw;
+  max-height: 10vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+}
+
+.spot {
+  vertical-align: middle;
+  display: table-cell;
+  max-height: 3vh;
+}
+
+.spot-text {
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 0.2rem;
+  font-size: 0.5rem;
+  color: #9a9a9a;
+}
+
+.goomba {
+  position: fixed;
+  bottom: 0;
+  background-color: #020202;
+  min-width: 100vw;
+  text-align: center;
+  font-size: 0.3rem;
+  display: none;
+}
