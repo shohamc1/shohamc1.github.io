@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404! | shohamc1</title>
     <!--<script src="ball.js"></script>-->
-    
-    
-    <link rel="stylesheet" type="text/css" href="styles/ball.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="/styles/ball.css" />
 </head>
+
 <body>
-    
-    <div class="container">        
+
+    <div class="container">
         <div class="frame"></div>
         <div class="frame"></div>
         <div class="frame"></div>
@@ -23,10 +25,12 @@
         <div class="frame"></div>
     </div>
 
-    <p class="mega">4<span class="boom">0</span>4<div class="bola"></div></p>
+    <p class="mega">4<span class="boom">0</span>4
+    <div class="bola"></div>
+    </p>
     <p class="mini">Page not found. &#128549;</p>
 
-    <script src="js/three.js"></script>
+    <script src="/js/three.js"></script>
     <script>
         var container = document.getElementsByClassName("bola")[0];
         var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -44,13 +48,13 @@
 
         // Material
         var pinkMat = new THREE.MeshPhongMaterial({
-        color: new THREE.Color("rgb(18, 130, 222)"),
-        emissive: new THREE.Color("rgb(0,0,0)"),
-        specular: new THREE.Color("rgb(255,155,255)"),
-        shininess: 100,
-        shading: THREE.FlatShading,
-        transparent: 1,
-        opacity: 1,
+            color: new THREE.Color("rgb(18, 130, 222)"),
+            emissive: new THREE.Color("rgb(0,0,0)"),
+            specular: new THREE.Color("rgb(255,155,255)"),
+            shininess: 100,
+            shading: THREE.FlatShading,
+            transparent: 1,
+            opacity: 1,
         });
 
         var L1 = new THREE.PointLight(0xffffff, 1);
@@ -71,8 +75,8 @@
         scene.add(Ico);
 
         function update() {
-        Ico.rotation.x += 2 / 100;
-        Ico.rotation.y += 2 / 100;
+            Ico.rotation.x += 2 / 100;
+            Ico.rotation.y += 2 / 100;
         }
 
         // Render
@@ -85,4 +89,5 @@
         render();
     </script>
 </body>
+
 </html>
