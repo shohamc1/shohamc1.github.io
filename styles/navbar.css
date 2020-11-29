@@ -1,0 +1,33 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1f1f1f;
+  color: white;
+  width: 100vw;
+  padding-top: 0.2rem;
+  padding-bottom: 0.4rem;
+  z-index: 20;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.navbar.span {
+  font-weight: bolder;
+  color: inherit;
+}
+
+#radiohead {
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  text-decoration: underline;
+}
+
+#home {
+  text-decoration: underline;
+}
+
+a {
+  color: inherit;
+}

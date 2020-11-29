@@ -51,7 +51,7 @@
             color: new THREE.Color("rgb(18, 130, 222)"),
             emissive: new THREE.Color("rgb(0,0,0)"),
             specular: new THREE.Color("rgb(255,155,255)"),
-            shininess: 100,
+            shininess: 0,
             shading: THREE.FlatShading,
             transparent: 1,
             opacity: 1,
@@ -64,13 +64,13 @@
         scene.add(L1);
 
         var L2 = new THREE.PointLight(0xffffff, 0.8);
-        L2.position.z = 200;
+        L2.position.z = 300;
         L2.position.y = 400;
         L2.position.x = -100;
         scene.add(L2);
 
         // IcoSphere -> THREE.IcosahedronGeometry(80, 1) 1-4
-        var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(75, 1), pinkMat);
+        var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(75, 2), pinkMat);
         Ico.rotation.z = 0.5;
         scene.add(Ico);
 

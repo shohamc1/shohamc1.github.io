@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Consolas, monaco, monospace;
+  font-family: "JetBrains Mono", Consolas, monaco, monospace;
   scrollbar-width: none;
 }
 
 section {
   padding: 50px;
-  background: #000;
+  background: #232323;
 }
 
 .removeunderline {

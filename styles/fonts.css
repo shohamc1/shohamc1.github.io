@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-SemiLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Medium.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Light.ttf") format("truetype");
+  font-weight: lighter;
+}
