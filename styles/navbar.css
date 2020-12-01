@@ -22,6 +22,10 @@ a {
   color: inherit;
 }
 
+#homepage {
+  padding-left: 1rem;
+}
+
 #radiohead {
   position: absolute;
   right: 0;
