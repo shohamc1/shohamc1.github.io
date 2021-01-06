@@ -27,8 +27,17 @@ a {
 }
 
 #radiohead {
-  position: absolute;
-  right: 0;
+  transform: translateX(-20%);
+  text-decoration: underline;
+
+  float: right;
+}
+
+#radiohead * {
+  padding: 10px;
+}
+
+#p404 {
   transform: translateX(-50%);
   text-decoration: underline;
 }

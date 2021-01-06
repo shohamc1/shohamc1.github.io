@@ -217,3 +217,24 @@ section p {
   font-size: 3em;
   color: #fff;
 }
+
+.pfp {
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center right;
+}
+
+.name {
+  font-weight: bolder;
+  color: whitesmoke;
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.subname {
+  display: flex;
+  flex-direction: row;
+}
