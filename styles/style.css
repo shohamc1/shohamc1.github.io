@@ -240,9 +240,10 @@ section p {
 }
 
 .background {
+  z-index: -1;
   background: linear-gradient(217deg, #008aff, #00ffe7);
   background-color: black;
-  animation: animate 12s linear infinite;
+  animation: animate 120s linear infinite;
 
   width: 100%;
   height: 100%;
@@ -256,10 +257,12 @@ section p {
 .profile-header {
   position: relative;
   overflow: hidden;
+
+  padding: 50px;
 }
 
 .glass {
-  background: rgba(128, 128, 128, 0.25);
+  background: rgba(120, 120, 120, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
