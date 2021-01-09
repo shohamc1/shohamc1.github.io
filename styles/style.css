@@ -239,12 +239,23 @@ section p {
   flex-direction: row;
 }
 
-.profile-header {
+.background {
   background: linear-gradient(217deg, #008aff, #00ffe7);
   background-color: black;
   animation: animate 12s linear infinite;
 
+  width: 100%;
+  height: 100%;
   padding: 50px;
+  top: -50px;
+  left: -50px;
+
+  position: absolute;
+}
+
+.profile-header {
+  position: relative;
+  overflow: hidden;
 }
 
 .glass {
