@@ -219,8 +219,8 @@ section p {
 }
 
 .pfp {
-  width: 20vh;
-  height: 20vh;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
 
   object-fit: cover;
@@ -259,6 +259,8 @@ section p {
   overflow: hidden;
 
   padding: 50px;
+  padding-left: 33vw;
+  padding-right: 33vw;
 }
 
 .glass {
